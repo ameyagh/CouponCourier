@@ -1,4 +1,4 @@
-package com.example.couponcourier;
+package edu.illinois.cs465.couponcourier;
 
 import androidx.appcompat.app.AppCompatActivity;
 
