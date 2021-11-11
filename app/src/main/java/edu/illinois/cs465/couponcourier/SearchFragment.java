@@ -8,9 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,9 +69,8 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        String json = loadJSONFromAsset();
-        Log.d("Searching", json);
         return inflater.inflate(R.layout.fragment_search, container, false);
     }
 
@@ -82,5 +88,38 @@ public class SearchFragment extends Fragment {
             return null;
         }
         return json;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        populateResults();
+    }
+
+    public void populateResults() {
+        try {
+            String json = loadJSONFromAsset();
+            Log.d("Searching", json);
+            JSONArray jArr = new JSONArray(json);
+            int len = jArr.length();
+            List<String> listContents = new ArrayList<String>(len);
+            for (int i = 0; i < len; ++i) {
+                JSONObject jObj = jArr.getJSONObject(i);
+                String brand = jObj.getString("Brand");
+                Log.d("Populating", brand);
+                listContents.add(brand);
+            }
+            Log.d("a", String.valueOf(listContents.size()));
+            ListView lv = (ListView) getView().findViewById(R.id.search_results);
+            if (lv != null) {
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, listContents);
+                lv.setAdapter(adapter);
+                Log.d("Yay", "I set the adapter, fight me.");
+            } else {
+                Log.d("ONO", "We couldn't get the list view wtf");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
