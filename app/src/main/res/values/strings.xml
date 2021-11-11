@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CouponCourier</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_search_category">Search by Category</string>
+    <string name="search_hint">Type your query here.</string>
 </resources>
