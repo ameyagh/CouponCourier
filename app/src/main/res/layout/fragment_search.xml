@@ -6,9 +6,34 @@
     tools:context=".SearchFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="bottom"
+        >
+        <LinearLayout
+            android:paddingStart="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:text="wah">
+            </Button>
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_bar"
+                android:queryHint="@string/search_hint"
+                android:iconifiedByDefault="true"
+                android:backgroundTint="@color/white"
+            >
+            </SearchView>
+        </LinearLayout>
+    </RelativeLayout>
+
+
 
 </FrameLayout>
