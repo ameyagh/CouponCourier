@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1828125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_storefront_24.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14447463768115942" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.14447463768115942" />
+        <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.20648464163822525" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14387031408308004" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.30512820512820515" />
         <entry key="..\:/Hyperion/IdeaProjects/cs465/CouponCourier/app/src/main/res/layout/fragment_search.xml" value="0.3625" />
         <entry key="..\:/Hyperion/IdeaProjects/cs465/CouponCourier/app/src/main/res/xml/searchable.xml" value="0.20260416666666667" />
       </map>
@@ -13,5 +20,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.23968284265058895" />
+      </ProjectState>
+    </option>
   </component>
 </project>
