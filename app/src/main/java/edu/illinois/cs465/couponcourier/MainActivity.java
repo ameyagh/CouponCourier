@@ -18,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Initialize Bottom Navigation View.
-        BottomNavigationView navView = findViewById(R.id.bottomNav_view);
+
+        BottomNavigationView navView = (BottomNavigationView) findViewById(R.id.bottomNav_view);
+
 
         //Pass the ID's of Different destinations
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_search, R.id.navigation_upload)
+                R.id.navigation_home, R.id.navigation_search, R.id.navigation_coupon, R.id.navigation_upload)
                 .build();
 
         //Initialize NavController.

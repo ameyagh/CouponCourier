@@ -18,6 +18,12 @@
         android:label="search"
         tools:layout="@layout/fragment_search"
         />
+    <fragment
+        android:id="@+id/navigation_coupon"
+        android:name="edu.illinois.cs465.couponcourier.CouponFragment"
+        android:label="coupon"
+        tools:layout="@layout/fragment_coupon"
+        />
 
 
     <fragment

@@ -9,6 +9,10 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:title="search" />
     <item
+        android:id="@+id/navigation_coupon"
+        android:icon="@drawable/ic_baseline_fiber_new_24"
+        android:title="coupon" />
+    <item
         android:id="@+id/navigation_upload"
         android:icon="@drawable/ic_outline_cloud_upload_24"
         android:title="upload" />
