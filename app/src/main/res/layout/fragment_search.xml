@@ -12,12 +12,14 @@
         android:layout_gravity="bottom"
         >
         <LinearLayout
+            android:id="@+id/searchbar_layout"
             android:paddingStart="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
             <Button
+                android:id="@+id/filter_button"
                 android:layout_width="72dp"
                 android:layout_height="48dp"
                 android:text="wah">
@@ -25,13 +27,18 @@
             <SearchView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/search_bar"
+                android:id="@+id/searchbar"
                 android:queryHint="@string/search_hint"
                 android:iconifiedByDefault="true"
                 android:backgroundTint="@color/white"
             >
             </SearchView>
         </LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
     </RelativeLayout>
 
 
