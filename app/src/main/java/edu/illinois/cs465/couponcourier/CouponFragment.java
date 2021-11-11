@@ -79,7 +79,9 @@ public class CouponFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_coupon, container, false);
+
         ImageView couponLogo =(ImageView) root.findViewById(R.id.couponLogo);
+        couponLogo.setImageResource(getResources().getIdentifier("@drawable/nike_logo", null, getActivity().getPackageName()));
 
         LinearLayout instore_block =(LinearLayout) root.findViewById(R.id.instore_block);
         LinearLayout online_block =(LinearLayout) root.findViewById(R.id.online_block);
@@ -98,9 +100,9 @@ public class CouponFragment extends Fragment {
         military_block.setVisibility(View.VISIBLE);
         stackable_block.setVisibility(View.VISIBLE);
 
-        int imageResource = getResources().getIdentifier("@drawable/nike_logo", null, getActivity().getPackageName());
+        TextView additional_restrictions = (TextView) root.findViewById(R.id.additional_restrictions);
+        additional_restrictions.setText("blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah ");
 
-        couponLogo.setImageResource(imageResource);
         return root;
     }
 }

@@ -230,17 +230,16 @@
 
     <TextView
         android:id="@+id/additional_restrictions"
-        android:layout_width="355dp"
-        android:layout_height="200dp"
+        android:layout_width="350dp"
+        android:layout_height="178dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="273dp"
+        android:layout_marginTop="295dp"
         android:ems="10"
         android:inputType="none"
         android:scrollbars="vertical"
-        android:text="additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions additional restrictions "
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textIsSelectable="true"
@@ -261,6 +260,20 @@
         android:inputType="textMultiLine"
         android:text="REDEEM"
         android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/additional_restrictions_title"
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="273dp"
+        android:text="Additional Restrictions:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <!--        </FrameLayout>-->
