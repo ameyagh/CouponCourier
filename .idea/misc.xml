@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1828125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_storefront_24.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14447463768115942" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.14447463768115942" />
-        <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.19206357011216788" />
+        <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.20648464163822525" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14387031408308004" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.30512820512820515" />
       </map>

@@ -3,11 +3,11 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_outline_home_24"
-        android:title="home" />
+        android:title="Home" />
     <item
         android:id="@+id/navigation_search"
         android:icon="@drawable/ic_baseline_search_24"
-        android:title="search" />
+        android:title="Search" />
     <item
         android:id="@+id/navigation_coupon"
         android:icon="@drawable/ic_baseline_fiber_new_24"
@@ -15,5 +15,5 @@
     <item
         android:id="@+id/navigation_upload"
         android:icon="@drawable/ic_outline_cloud_upload_24"
-        android:title="upload" />
+        android:title="Upload" />
 </menu>

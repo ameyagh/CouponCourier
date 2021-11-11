@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -76,6 +80,24 @@ public class CouponFragment extends Fragment {
         // Inflate the layout for this fragment
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_coupon, container, false);
         ImageView couponLogo =(ImageView) root.findViewById(R.id.couponLogo);
+
+        LinearLayout instore_block =(LinearLayout) root.findViewById(R.id.instore_block);
+        LinearLayout online_block =(LinearLayout) root.findViewById(R.id.online_block);
+        LinearLayout military_block =(LinearLayout) root.findViewById(R.id.military_block);
+        LinearLayout stackable_block =(LinearLayout) root.findViewById(R.id.stackable_block);
+
+        TextView brand_text = (TextView) root.findViewById(R.id.brand_text);
+        TextView discount_text = (TextView) root.findViewById(R.id.discount_text);
+        TextView exp_text = (TextView) root.findViewById(R.id.exp_text);
+        brand_text.setText("Nike");
+        discount_text.setText("20% Off");
+        exp_text.setText("Exp. 12/31/2021");
+
+        instore_block.setVisibility(View.VISIBLE);
+        online_block.setVisibility(View.VISIBLE);
+        military_block.setVisibility(View.VISIBLE);
+        stackable_block.setVisibility(View.VISIBLE);
+
         int imageResource = getResources().getIdentifier("@drawable/nike_logo", null, getActivity().getPackageName());
 
         couponLogo.setImageResource(imageResource);
