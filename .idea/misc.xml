@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nickb/AndroidStudioProjects/CouponCourier/app/src/main/res/drawable/bg_white_rounded.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/nickb/AndroidStudioProjects/CouponCourier/app/src/main/res/layout/activity_main.xml" value="0.23731884057971014" />
+        <entry key="..\:/Users/nickb/AndroidStudioProjects/CouponCourier/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/nickb/AndroidStudioProjects/CouponCourier/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14387031408308004" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.30512820512820515" />
       </map>
