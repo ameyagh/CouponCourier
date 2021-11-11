@@ -1,5 +1,7 @@
 package edu.illinois.cs465.couponcourier;
 
+import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Spinner;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,12 +63,62 @@ public class UploadFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_upload, container, false);
+        View view = inflater.inflate(R.layout.fragment_upload, container, false);
+
+        Spinner brandSpinner = (Spinner) view.findViewById(R.id.brandSpinner);
+        Spinner categorySpinner = (Spinner) view.findViewById(R.id.categorySpinner);
+        Spinner typeSpinner = (Spinner) view.findViewById(R.id.typeSpinner);
+        EditText expDatePicker = (EditText) view.findViewById(R.id.expDatePicker);
+
+        Calendar calendar = Calendar.getInstance();
+
+
+        DatePickerDialog.OnDateSetListener datePicker = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(Calendar.YEAR, year);
+                calendar.set(Calendar.MONTH, month);
+                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateText(calendar, expDatePicker);
+            }
+        };
+
+        expDatePicker.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(view.getContext(), datePicker, calendar
+                        .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                        calendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+        ArrayAdapter<String> brandArrayAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.brands));
+        ArrayAdapter<String> categoryArrayAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.categories));
+        ArrayAdapter<String> typeArrayAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.types));
+
+        brandArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        brandSpinner.setAdapter(brandArrayAdapter);
+        categorySpinner.setAdapter(categoryArrayAdapter);
+        typeSpinner.setAdapter(typeArrayAdapter);
+
+        return view;
+    }
+
+    private void updateText(Calendar calendar, EditText expDatePicker) {
+        String myFormat = "MMM d, yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        expDatePicker.setText(sdf.format(calendar.getTime()));
     }
 }
