@@ -31,12 +31,12 @@
 
         <ImageView
             android:id="@+id/couponLogo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="50dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp"
             tools:srcCompat="@android:drawable/screen_background_dark" />
 
         <LinearLayout
@@ -268,8 +268,8 @@
         android:id="@+id/redeem_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="60dp"
@@ -280,7 +280,7 @@
         android:text="REDEEM"
         android:textSize="34sp"
         android:textStyle="bold"
-        android:visibility="visible"
+        android:visibility="gone"
         app:cornerRadius="10dp" />
 
     <TextView
@@ -296,46 +296,52 @@
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/coupon_code_text"
-        android:layout_width="224dp"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="69dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="78dp"
-        android:textIsSelectable="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="52dp"
+        android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/copy_button"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="71dp"
-        android:background="?selectableItemBackgroundBorderless"
-        android:scaleType="fitXY"
-        android:src="@drawable/copy"
-        android:visibility="gone" />
+        <ImageButton
+            android:id="@+id/copy_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="112dp"
+            android:layout_marginBottom="71dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:src="@drawable/copy"
+            android:visibility="visible" />
 
-    <ImageButton
-        android:id="@+id/screenshot_button"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="70dp"
-        android:background="?selectableItemBackgroundBorderless"
-        android:scaleType="fitXY"
-        android:src="@drawable/screenshot"
-        android:visibility="gone" />
+        <TextView
+            android:id="@+id/coupon_code_text"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="78dp"
+            android:text="testtext"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/screenshot_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="70dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:src="@drawable/screenshot"
+            android:visibility="visible" />
+    </LinearLayout>
 
 
 </RelativeLayout>
